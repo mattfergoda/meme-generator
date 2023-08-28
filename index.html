@@ -10,17 +10,19 @@
 </head>
 <body>
   <h1>Make-a-Meme</h1>
-  <form>
-    <label for="file">Link to Image</label><br>
-    <input type="text" id="file" name="file">
-    <label for="toptext">Top Text</label><br>
-    <input type="text" id="toptext" name="toptext">
-    <label for="bottomtext">Bottom Text</label><br>
-    <input type="text" id="bottomtext" name="bottomtext">
-    <input type="submit" value="Make Meme">
+  <form id="meme-form" action="">
+    <label for="filelink">Link to Image</label>
+    <input type="text" placeholder='Link to image' id="filelink" name="file"><br>
+    <label for="toptext">Top Text</label>
+    <input type="text" placeholder="Some funny text..." id="toptext" name="toptextname"><br>
+    <label for="bottomtext">Bottom Text</label>
+    <input type="text" placeholder="... goes here" id="bottomtext" name="bottomtextname"><br>
+    <button type="submit">Make Meme</button>
+
   </form>
-  <div class="meme-gallery">
+  <div id="meme-gallery">
 
   </div>
 </body>
+<script src="memegen.js"></script>
 </html>
