@@ -41,6 +41,11 @@ function createMeme(e) {
   // Add the "meme" div to the "meme-gallery" div.
   let memeGallery = document.getElementById('meme-gallery');
   memeGallery.appendChild(meme);
+
+  // Clear the form's inputs.
+  imgLinkInputElement.value = '';
+  topTextInputElement.value = '';
+  bottomTextInputElement.value = '';
 }
 
 function deleteMeme(e) {
