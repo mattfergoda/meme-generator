@@ -66,6 +66,8 @@ input, .meme-button {
   position: absolute;
   transform: translate(-50%, -50%);
   margin: 0 0;
+  width: 750px;
+  overflow-wrap: break-word; 
 }
 
 .meme-image {
@@ -73,7 +75,6 @@ input, .meme-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .top-text {
