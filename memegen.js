@@ -1,15 +1,21 @@
 function createMeme(e) {
+  // Prevents the page from reloading on form submit.
   e.preventDefault()
 
+  // Get the text field inputs from the user.
   let imgLinkInputElement = document.getElementById('filelink');
   let topTextInputElement = document.getElementById('toptext');
   let bottomTextInputElement = document.getElementById('bottomtext');
 
+  // Do nothing if the user didn't complete all fields.
   if (!imgLinkInputElement.value || !topTextInputElement.value || !bottomTextInputElement.value) return;
-  // Create a new "meme" div.
+  
+  // Create a new "meme" div that holds the image/text container div, 
+  // and the delete button.
   let meme = document.createElement('div');
   meme.classList.add('meme');
 
+  // This div will have the image, top text, and bottom text.
   let memeImageContainer = document.createElement('div');
   memeImageContainer.classList.add('meme-image-container');
 
@@ -55,8 +61,9 @@ function createMeme(e) {
 }
 
 function deleteMeme(e) {
-  let thisMeme = this.parentNode;
-  thisMeme.remove();
+  // Get the delete button's parent, which is the meme div.
+  let thisMeme = this.parentNode; 
+  thisMeme.remove(); // Delete it.
 }
 
 function addButtonListeners() {
