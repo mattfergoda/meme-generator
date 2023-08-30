@@ -10,18 +10,21 @@ function createMeme(e) {
   let meme = document.createElement('div');
   meme.classList.add('meme');
 
+  let memeImageContainer = document.createElement('div');
+  memeImageContainer.classList.add('meme-image-container');
+
   // Create the image element.
   let memeImage = document.createElement("IMG");
   memeImage.className = 'meme-image';
   memeImage.src = imgLinkInputElement.value;
   
   // Create the top text element.
-  let topTextMemeElement = document.createElement("P");
+  let topTextMemeElement = document.createElement("div");
   topTextMemeElement.innerHTML = topTextInputElement.value.toUpperCase();
   topTextMemeElement.className = 'meme-text top-text';
 
   // Create the bottom text element.
-  let bottomTextMemeElement = document.createElement("P");
+  let bottomTextMemeElement = document.createElement("div");
   bottomTextMemeElement.innerHTML = bottomTextInputElement.value.toUpperCase();
   bottomTextMemeElement.className = 'meme-text bottom-text';
 
@@ -32,10 +35,13 @@ function createMeme(e) {
   // Add an event listener for this meme's delete button.
   deleteButtonElement.addEventListener("click", deleteMeme);
   
+  // Add image, top text, and bottom text to "meme-image-container"
+  memeImageContainer.appendChild(memeImage);
+  memeImageContainer.appendChild(topTextMemeElement);
+  memeImageContainer.appendChild(bottomTextMemeElement);
+
   // Add these elements to the "meme" div.
-  meme.appendChild(memeImage);
-  meme.appendChild(topTextMemeElement);
-  meme.appendChild(bottomTextMemeElement);
+  meme.appendChild(memeImageContainer);
   meme.appendChild(deleteButtonElement);
 
   // Add the "meme" div to the "meme-gallery" div.
