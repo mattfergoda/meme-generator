@@ -17,12 +17,12 @@ function createMeme(e) {
   
   // Create the top text element.
   let topTextMemeElement = document.createElement("P");
-  topTextMemeElement.innerHTML = topTextInputElement.value;
+  topTextMemeElement.innerHTML = topTextInputElement.value.toUpperCase();
   topTextMemeElement.className = 'meme-text top-text';
 
   // Create the bottom text element.
   let bottomTextMemeElement = document.createElement("P");
-  bottomTextMemeElement.innerHTML = bottomTextInputElement.value;
+  bottomTextMemeElement.innerHTML = bottomTextInputElement.value.toUpperCase();
   bottomTextMemeElement.className = 'meme-text bottom-text';
 
   // Create the delete button.
