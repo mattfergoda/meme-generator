@@ -46,20 +46,16 @@ input, .meme-button {
 
 }
 
-#meme-gallery {
-  padding: 3%; 
-}
-
 .meme {
   text-align: center;
-  padding: 1% 0; 
+  padding: 2% 0;
 }
 
 .meme-image-container {
   position: relative;
   margin: auto;
   width: 800px;
-  padding: 2% 0;
+  padding: 1% 0;
 }
 
 .meme-text {
